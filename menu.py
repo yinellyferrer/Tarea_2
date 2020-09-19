@@ -30,3 +30,35 @@ while True: # creacion de menu, se crean print para cada opcion del menu
             salario = input("Digite su salario:") 
             agenda[nombre]=salario 
         os.system('cls') # limpia la pantalla
+
+    elif opcion == 2:
+        cadena = input("Digite el nombre del funcionario a buscar:") 
+        for nombre, cedula in agenda.items():
+            if nombre.startswith(cadena):
+                print("El número de cedula de %s es el %s" % (nombre,agenda[nombre]))
+                print("El cargo de %s es el %s" % (nombre,agenda[nombre]))
+                print("El  salario de %s es el %s" % (nombre,agenda[nombre]))
+            else:
+              print("El nombre del funcionario no existe")
+
+
+    elif opcion == 3:
+        nombre = input("Digite el nombre del funcionario a borrar:")    
+        if nombre in agenda:
+            opcion = input("Pulsa 's' si quieres borrarlo!!!. Otra tecla para continuar.")
+            if opcion == "s":
+                del agenda[nombre]
+        else:
+            print("No existe el contacto")
+
+    elif opcion == 4:
+        for nombre, cedula in agenda.items():
+            print(nombre,"->",cedula)
+
+
+    # la opcion 5 para salir del programa
+    elif opcion == 5:
+        os.system('cls')
+        break
+    else:
+        print("Opción incorrecta")   
