@@ -15,8 +15,8 @@ while True: # creacion de menu, se crean print para cada opcion del menu
         nombre = input("Digite el nombre del funcionario:")  # Solicita el nombre del funcionario
         if nombre in agenda: # Analiza si el nombre ingresado esta en el diccionario
             print("%s ya existe su numero de cedula es: %s" % (nombre,agenda[nombre])) # Manda un mensaje de que el funcionario ya existe y muestra su cedula
-            print("%s ya existe su cargo es: %s" % (nombre,agenda[nombre])) # Manda un mensaje de que el funcionario ya existe y muestra su cargo
-            print("%s ya existe su salario es: %s" % (nombre,agenda[nombre])) # Manda un mensaje de que el funcionario ya existe y muestra su salario
+            print("%s ya existe su cargo es: %s" % (nombre,agenda[nombre])) 
+            print("%s ya existe su salario es: %s" % (nombre,agenda[nombre])) 
             opcion = input("Pulsa 's' si quieres modificarlo!!!. Otra tecla para continuar.") # Manda un mensaje que solicita si desea modificar el funcionario existente
             if opcion == "s": # Opcion de cambiar la cedula del funcionario
                 cedula = input("Digite su nuevo número de cedula:") # Solicita el nuevo numero de cedula
@@ -25,8 +25,8 @@ while True: # creacion de menu, se crean print para cada opcion del menu
             # Solicitar los datos del nuevo funcionario a ingresar y los guarda en el diccionario
             cedula = input("Digite su número de cedula:") # Solicita la cedula del funcionario
             agenda[nombre]=cedula # Agrega la cedula al diccionario
-            cargo = input("Digite su cargo en la empresa:") # Solicita el cargo del funcionario
-            agenda[nombre]=cargo # Agrega el cargo al diccionario
-            salario = input("Digite su salario:") # Solicita el salario del funcionario
-            agenda[nombre]=salario # Agrega el salario al diccionario
+            cargo = input("Digite su cargo en la empresa:") 
+            agenda[nombre]=cargo 
+            salario = input("Digite su salario:") 
+            agenda[nombre]=salario 
         os.system('cls') # limpia la pantalla
